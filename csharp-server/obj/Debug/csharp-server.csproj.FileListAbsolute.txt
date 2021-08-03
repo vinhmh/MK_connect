@@ -1,0 +1,9 @@
+D:\Projects\MK_Websocket\csharp-server\bin\Debug\csharp-server.exe.config
+D:\Projects\MK_Websocket\csharp-server\bin\Debug\csharp-server.exe
+D:\Projects\MK_Websocket\csharp-server\bin\Debug\csharp-server.pdb
+D:\Projects\MK_Websocket\csharp-server\bin\Debug\websocket-sharp.dll
+D:\Projects\MK_Websocket\csharp-server\obj\Debug\csharp-server.csproj.AssemblyReference.cache
+D:\Projects\MK_Websocket\csharp-server\obj\Debug\csharp-server.csproj.CoreCompileInputs.cache
+D:\Projects\MK_Websocket\csharp-server\obj\Debug\csharp-server.csproj.CopyComplete
+D:\Projects\MK_Websocket\csharp-server\obj\Debug\csharp-server.exe
+D:\Projects\MK_Websocket\csharp-server\obj\Debug\csharp-server.pdb
