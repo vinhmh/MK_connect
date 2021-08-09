@@ -83,20 +83,16 @@ namespace csharp_client
         public string mk_id;
 
         // thông tin của user quét được qua MK
-        public string user_info;
-
-        // trạng thái vào ra, tham số = (in/out)
-        public string status;
+        public string uid;
 
         // thời điểm vào ra ex: 2021-08-03T09:20:16.3126479Z
         // DateTime.UtcNow.ToString("o");
         public string date;
 
-        public DataTemplate(string Mk_id, string User_info, string StatusInOut, string Date)
+        public DataTemplate(string Mk_id, string Uid, string Date)
         {
             mk_id = Mk_id;
-            user_info = User_info;
-            status = StatusInOut;
+            uid = Uid;
             date = Date;
         }
     }
