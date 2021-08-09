@@ -30,3 +30,13 @@ D:\Projects\MK_Websocket\websocket-client-test\obj\Debug\csharp-client.csproj.Co
 D:\Projects\MK_Websocket\websocket-client-test\obj\Debug\csharp-client.csproj.CopyComplete
 D:\Projects\MK_Websocket\websocket-client-test\obj\Debug\csharp-client.exe
 D:\Projects\MK_Websocket\websocket-client-test\obj\Debug\csharp-client.pdb
+D:\Projects\MK_Websocket\csharp-client\obj\Debug\csharp-client.csproj.CoreCompileInputs.cache
+D:\Projects\MK_Websocket\csharp-client\obj\Debug\csharp-client.exe
+D:\Projects\MK_Websocket\csharp-client\obj\Debug\csharp-client.pdb
+D:\Projects\MK_Websocket\csharp-client\bin\Debug\csharp-client.exe.config
+D:\Projects\MK_Websocket\csharp-client\bin\Debug\csharp-client.exe
+D:\Projects\MK_Websocket\csharp-client\bin\Debug\csharp-client.pdb
+D:\Projects\MK_Websocket\csharp-client\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\MK_Websocket\csharp-client\bin\Debug\websocket-sharp.dll
+D:\Projects\MK_Websocket\csharp-client\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\MK_Websocket\csharp-client\obj\Debug\csharp-client.csproj.CopyComplete

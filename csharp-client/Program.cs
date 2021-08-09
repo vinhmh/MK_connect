@@ -25,7 +25,7 @@ namespace csharp_client
             {
                 ws.OnMessage += Ws_OnMessage;
                 ws.Connect();
-                DataTemplate data_send = new DataTemplate( "mkid_demo", "user_info_demo", "in", "2021-08-03T09:20:16.3126479Z");
+                DataTemplate data_send = new DataTemplate( "mkid_demo", "uid", "2021-08-03T09:20:16.3126479Z");
                 ws.Send(JsonConvert.SerializeObject(data_send));
                 Console.ReadKey();
             }
