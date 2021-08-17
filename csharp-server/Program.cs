@@ -9,20 +9,20 @@ using WebSocketSharp.Server;
 
 namespace csharp_server
 {
-    public class Echo : WebSocketBehavior
+    public class GetMKReaderID : WebSocketBehavior
     {
         protected override void OnMessage(MessageEventArgs e)
         {
-            Console.WriteLine("Received message from Echo client: " + e.Data);
+            Console.WriteLine("Received message from GetMKReaderID client: " + e.Data);
             Send(e.Data);
         }
     }
 
-    public class EchoAll : WebSocketBehavior
+    public class GetMKLogs : WebSocketBehavior
     {
         protected override void OnMessage(MessageEventArgs e)
         {
-            Console.WriteLine("Received message from EchoAll client: " + e.Data);
+            Console.WriteLine("Received message from GetMKLogs client: " + e.Data);
             Sessions.Broadcast(e.Data);
         }
     }
@@ -33,12 +33,12 @@ namespace csharp_server
         {
             WebSocketServer wssv = new WebSocketServer("ws://127.0.0.1:7890");
 
-            wssv.AddWebSocketService<Echo>("/Echo");
-            wssv.AddWebSocketService<EchoAll>("/EchoAll");
+            wssv.AddWebSocketService<GetMKReaderID>("/GetMKReaderID");
+            wssv.AddWebSocketService<GetMKLogs>("/GetMKLogs");
 
             wssv.Start();
-            Console.WriteLine("WS server started on ws://127.0.0.1:7890/Echo");
-            Console.WriteLine("WS server started on ws://127.0.0.1:7890/EchoAll");
+            Console.WriteLine("WS server started on ws://127.0.0.1:7890/GetMKReaderID");
+            Console.WriteLine("WS server started on ws://127.0.0.1:7890/GetMKLogs");
 
             Console.ReadKey();
             wssv.Stop();

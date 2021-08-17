@@ -19,16 +19,28 @@ namespace csharp_client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(DateTime.Now);
-            // Create a scoped instance of a WS client that will be properly disposed
-            using (WebSocket ws = new WebSocket("ws://127.0.0.1:7890/EchoAll"))
+
+            // gọi đến hàm này để cập nhật card_reader đến phần mềm điều khiển khi khởi tạo socket connection
+            using (WebSocket ws = new WebSocket("ws://127.0.0.1:7890/GetMKReaderID"))
             {
                 ws.OnMessage += Ws_OnMessage;
                 ws.Connect();
-                DataTemplate data_send = new DataTemplate( "mkid_demo", "uid", "2021-08-03T09:20:16.3126479Z");
+                DataTemplate data_send = new DataTemplate();
+                data_send.mk_reader_id = "mk_Reader_sample";
+                ws.Send(JsonConvert.SerializeObject(data_send));
+                // Console.ReadKey();
+            }
+
+            // gọi dến hàm này khi có người dùng quẹt thẻ
+            using (WebSocket ws = new WebSocket("ws://127.0.0.1:7890/GetMKLogs"))
+            {
+                ws.OnMessage += Ws_OnMessage;
+                ws.Connect();
+                DataTemplate data_send = new DataTemplate( "mkid_demo2", "uid2", "2021-08-03T09:20:16.3126479Z", "session_id sample2");
                 ws.Send(JsonConvert.SerializeObject(data_send));
                 Console.ReadKey();
             }
+
         }
 
         private static void Ws_OnMessage(object sender, MessageEventArgs e)
@@ -80,20 +92,23 @@ namespace csharp_client
     class DataTemplate
     {
         // id của MK hoặc info của MK
-        public string mk_id;
+        public string mk_reader_id;
 
         // thông tin của user quét được qua MK
         public string uid;
 
         // thời điểm vào ra ex: 2021-08-03T09:20:16.3126479Z
         // DateTime.UtcNow.ToString("o");
-        public string date;
+        public string datetime;
 
-        public DataTemplate(string Mk_id, string Uid, string Date)
+        public string session_id;
+        public DataTemplate() { }
+        public DataTemplate(string mk_reader_id, string uid, string datetime, string session_id)
         {
-            mk_id = Mk_id;
-            uid = Uid;
-            date = Date;
+            this.mk_reader_id = mk_reader_id;
+            this.uid = uid;
+            this.datetime = datetime;
+            this.session_id = session_id;
         }
     }
 }
